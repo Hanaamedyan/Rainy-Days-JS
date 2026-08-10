@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View product details, pick a size, and add your favorite rain jacket to the shopping cart.">
+    <title>Rainy Days | Product Details</title>
+    <link href="../css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer">
+    <link rel="icon" href="../images/favicon.ico">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header>
+    <nav class="main-nav">
+        <div class="left-icons">
+            <a href="../index.html" class="logo">
+                <img src="../images/RainyDays_Logo-notext.png" alt="Rainy Days logo">
+            </a>
+
+            <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation menu">
+                <i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <ul id="primary-navigation" class="primary-navigation">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../category/mens-clothing.html">Men's</a></li>
+            <li><a href="../category/womens-clothing.html">Women's</a></li>
+            <li>
+                <a href="../checkout/index.html" class="cart-icon">
+                    <i class="fa-solid fa-cart-shopping fa-lg" aria-hidden="true"></i>
+                    Cart
+                    <span class="cart-number" data-cart-count hidden>0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+    <main id="main" tabindex="-1">
+        <section id="product-detail" class="product-card" aria-live="polite"></section>
+
+        <section>
+            <img src="../images/RainyDays_Logo-text.png" alt="Rainy Days logo with text" class="logo-text">
+            <p class="company-fact">
+                We have been crafting <span class="emphasis-1">high-quality</span> rain jackets in a 
+                <span class="emphasis-2">sustainable</span> way, and have been a trusted 
+                <span class="emphasis-3">companion</span> for men and women all over the world 
+                <span class="emphasis-4">since 1980.</span>
+            </p>
+
+            <div class="customer-club-wrapper">
+                <img src="../images/customer-club-BG.jpg"
+                alt="Man wearing red rain jacket with scenic mountain background"
+                class="customer-club">
+
+                <div class="customer-club-text">
+                    <h2>Rainy Days Customer Club</h2>
+
+                     <input type="checkbox" id="step1" class="toggle">
+
+                     <input type="checkbox" id="step2" class="toggle">
+                    
+                    <label for="step1" class="customer-club-button show-form">Become a Member Today!
+                    </label>
+
+                    <div class="email-form">
+                        <input type="email" aria-label="Email address" placeholder="Enter your email address" required>
+                        <label for="step2" class="submit-button">Submit</label>
+                    </div>
+
+                    <p class="thank-you">
+                        Thank you for subscribing! Check your email for a confirmation message.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="membership-benefits">
+            <h2 class="icon-heading">
+                <i class="fa-solid fa-ticket-simple" aria-hidden="true"></i>
+                Membership Benefits!
+            </h2>
+            <p>As a part of our customer club you get personal offers and access to sales and campaigns before everyone else. On my pages you will also have an overview of all your orders and receipts.</p>
+        </section>
+
+        <section class="payment">
+            <p class="section-label">Safe and easy payments</p>
+            <img src="../images/Payments.jpg" alt="Payment options: Apple Pay, Google Pay, PayPal, Klarna, Vipps, Visa, Mastercard and Amex.">
+        </section>
+
+        <section class="social-media">
+            <p class="section-label">Follow us on social media</p>
+            <img src="../images/Social-media.jpg" alt="Different social media: x, facebook, youtube, instagram.">
+        </section>
+    </main>
+    <footer class="footer-section">
+        <div class="footer-content">
+            <nav aria-label="Footer">
+                <div class="footer-column">
+
+                    <div class="footer-col">
+                        <p class="footer-heading">FAQ</p>
+                        <p>About us</p>
+                        <p>Our values</p>
+                        <p>Climate &amp; environment</p>
+                        <p>Careers - Work with us?</p>
+                    </div>
+
+                    <div class="footer-col">
+                        <p class="footer-heading">Contact</p>
+                        <p>Customer service</p>
+                        <p>Contact us</p>
+                        <p>Our stores</p>
+                        <p>Media press</p>
+                    </div>
+
+                    <div class="footer-col">
+                        <p class="footer-heading">Returns</p>
+                        <p>Returns</p>
+                        <p>Return policy</p>
+                        <p>Refunds</p>
+                        <p>Exchanges</p>
+                    </div>
+
+                    <div class="footer-col">
+                        <p class="footer-heading">Legal</p>
+                        <p><a href="../terms/index.html">Terms &amp; Conditions</a></p>
+                        <p><a href="../privacy/index.html">Privacy Policy</a></p>
+                    </div>
+                </div>
+            </nav>
+
+            <p class="copyright">Copyright, 2026 Rainy Days.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/nav.js"></script>
+    <script type="module" src="../js/product.js"></script>
+</body>
+</html>
