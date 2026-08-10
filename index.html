@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="We have been crafting high-quality rain jackets in a sustainable way, and have been a trusted companion for men and women all over the world since 1980.">
+    <meta name="description" content="Shop Rainy Days waterproof rain jackets for men and women. Browse our collection of high-quality rain jackets designed for a range of outdoor activities. Stay dry and comfortable in any weather with our durable and stylish jackets.">
     <title>Rainy Days | Home</title>
     <link href="css/styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
@@ -13,43 +13,49 @@
     <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
 <header>
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Primary">
         <div class="left-icons">
             <a href="index.html" class="logo">
                 <img src="images/RainyDays_Logo-notext.png" alt="Rainy Days logo">
             </a>
 
-            <div class="menu"> 
-                <i class="fa-solid fa-bars fa-lg"></i> 
-            </div> 
-
-            <div class="user-icons"> 
-                <i class="fa-solid fa-user fa-lg"></i> 
-            </div>
+            <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="toggle navigation menu">
+                <i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i>
+            </button>
         </div>
 
-        <div class="right-icons"> 
-            <i class="fa-solid fa-magnifying-glass fa-lg search"></i> 
-            <i class="fa-solid fa-cart-shopping fa-lg cart"></i> 
-        </div>
+        <ul id="primary-navigation" class="primary-navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category/mens-clothing.html">Men's</a></li>
+            <li><a href="category/womens-clothing.html">Women's</a></li>
+            <li>
+                <a href="checkout/index.html" class="cart-icon">
+                    <i class="fa-solid fa-cart-shopping fa-lg" aria-hidden="true"></i>
+                    Cart
+                    <span class="cart-number" data-cart-count hidden>0</span>
+                </a>
+            </li>
+        </ul>
     </nav>
 </header>
-    <main>
+
+    <main id="main" tabindex="-1">
         <section class="banner-container">
-            <img src="images/karsten-winegeart-rsPcY_vX1W0-unsplash-1.jpg" 
+             <img src="images/karsten-winegeart-rsPcY_vX1W0-unsplash-1.jpg" 
             alt="Woman wearing orange rain jacket leaning against a car window" 
             class="main-banner">
 
             <div class="banner-text"> 
-                <h1>Pushing the</h1> 
-                <h1>Comfort Zone</h1> 
+                <h1>Pushing the<br>Comfort Zone</h1> 
                 <p>Rain jackets designed for men and women.<br> They are designed for a range of different outdoor activities that enrich your lives.</p> 
             </div>
 
             <div class="banner-buttons"> 
-                    <a href="products-page.html" class="btn">SHOP MEN</a> 
-                    <a href="products-page.html" class="btn">SHOP WOMEN</a> 
+                    <a href="category/mens-clothing.html" class="btn">SHOP MEN</a> 
+                    <a href="category/womens-clothing.html" class="btn">SHOP WOMEN</a> 
             </div>
         </section>
 
@@ -71,30 +77,66 @@
 
             <div class="icon-row">
                 <div class="rain-icon">
-                    <i class="fa-solid fa-cloud-rain fa-2xl"></i>
+                    <i class="fa-solid fa-cloud-rain fa-2xl" aria-hidden="true"></i>
                     <p>Our jackets are equipped with advanced technology that keeps you dry even during a heavy downpour.</p>
                 </div>
 
                 <div class="shield-icon">
-                    <i class="fa-solid fa-shield fa-2xl"></i>
+                    <i class="fa-solid fa-shield fa-2xl" aria-hidden="true"></i>
                     <p>The materials have been carefully chosen by experts to ensure that we were able to create jackets that would last for many years to come.</p>
                 </div>
 
                 <div class="wind-icon">
-                    <i class="fa-solid fa-wind fa-2xl"></i>
+                    <i class="fa-solid fa-wind fa-2xl" aria-hidden="true"></i>
                     <p>Every jacket is made with breathable fabrics to help regulate temperature and prevent you from overheating.</p>
                 </div>
             </div>
         </section>
 
-        <section class="featured-products">
-                <h3>Featured Products</h3>
-                <p>Discover our best sellers</p>
-            <div class="product-row">
-                <a href="product-detail-page-4.html"> <img src="images/stormshell-best.svg" alt="Stormshell a men's rain jacket in grey, a lightweight rain jacket priced at $150.99"></a>
-                <a href="product-detail-page-1.html"> <img src="images/aquatrail-best.svg" alt="Aquatrail a men's rain jacket in red, a waterproof rain jacket priced at $165.99"></a>
-                <img src="images/shieldline-best.svg" alt="Shieldline a women's rain jacket in grey, a lightweight rain jacket priced at $169.99">
+        <section class="all-products" aria-labelledby="all-products-heading">
+            <h2 id="all-products-heading">All Products</h2>
+
+            <form id="product-filters" class="product-filters" aria-label="Filter Products">
+                <div class="filter-field">
+                    <label for="filter-gender">Gender</label>
+                    <select id="filter-gender" name="gender">
+                        <option value="">All</option>
+                        <option value="Male">Men's</option>
+                        <option value="Female">Women's</option>
+                    </select>
+                </div>
+
+                  <div class="filter-field">
+                    <label for="filter-sort">Sort by price</label>
+                    <select id="filter-sort" name="sort">
+                        <option value="">Featured</option>
+                        <option value="price-asc">Price: low to High</option>
+                        <option value="price-desc">Price: high to Low</option>
+                    </select>
+                </div>
+
+                <label class="filter-checkbox">
+                    <input type="checkbox" name="onSale">
+                    On sale only
+                </label>
+            </form>
+
+            <div id="product-grid" class="product-selection" aria-live="polite">
+                <div class="loading-state" role="status">
+                    <span class="spinner" aria-hidden="true"></span>
+                    <p>Loading products...</p>
+                </div>
             </div>
+
+            <div class="more-container">
+                <button type="button" id="load-more-btn" class="load-more" hidden>LOAD MORE ITEMS</button>
+                <p id="product-count" class="items"></p>
+            </div>
+        </section>
+
+        <section class="bestsellers" aria-labelledby="favorites-heading">
+            <h2 id="favorites-heading">Customer Favorites</h2>
+            <ul class="carousel" id="favorites-carousel"></ul>
         </section>
 
         <section>
@@ -110,14 +152,14 @@
                 <img src="images/customer-club-BG.jpg" 
                      alt="Man wearing red rain jacket with a scenic mountain background" 
                      class="customer-club">
-                
+
                 <div class="customer-club-text">
                     <h2>Rainy Days Customer Club</h2>
 
                     <input type="checkbox" id="step1" class="toggle">
 
                      <input type="checkbox" id="step2" class="toggle">
-
+                    
                     <label for="step1" class="customer-club-button show-form">Become a Member Today!
                     </label>
 
@@ -134,64 +176,80 @@
         </section>
 
         <section class="membership-benefits">
-            <h3 class="icon-heading">
-                <i class="fa-solid fa-ticket-simple"></i>
+            <h2 class="icon-heading">
+                <i class="fa-solid fa-ticket-simple" aria-hidden="true"></i>
                 Membership Benefits!
-            </h3>
+            </h2>
             <p>As a part of our customer club you get personal offers and access to sales and campaigns before everyone else. On my pages you will also have an overview of all your orders and receipts.</p>
         </section>
 
         <section class="payment">
-            <h4>Safe and easy payments</h4>
+            <p class="section-label">Safe and easy payments</p>
             <img src="images/Payments.jpg" alt="Payment options: Apple Pay, Google Pay, PayPal, Klarna, Vipps, Visa, Mastercard and Amex.">
         </section>
 
         <section class="social-media">
-            <h4>FOLLOW US ON SOCIAL MEDIA</h4>
+            <p class="section-label">Follow us on social media</p>
             <img src="images/Social-media.jpg" alt="Different social media: x, facebook, youtube, instagram.">
         </section>
     </main>
     <footer class="footer-section">
         <div class="footer-content">
-            <div class="footer-column">
+            <nav aria-label="Footer">
+                <div class="footer-column">
 
-                <div class="footer-col">
-                    <h5>FAQ</h5>
-                    <p>About us</p>
-                    <p>Our values</p>
-                    <p>Climate & environment</p>
-                    <p>Careers - Work with us?</p>
-                </div>
+                    <div class="footer-col">
+                        <p class="footer-heading">FAQ</p>
+                        <p>About us</p>
+                        <p>Our values</p>
+                        <p>Climate &amp; environment</p>
+                        <p>Careers - Work with us?</p>
+                    </div>
 
-                <div class="footer-col">
-                    <h5>Contact</h5>
-                    <p>Customer service</p>
-                    <p>Contact us</p>
-                    <p>Our stores</p>
-                    <p>Media press</p>
-                </div>
+                    <div class="footer-col">
+                        <p class="footer-heading">Contact</p>
+                        <p>Customer service</p>
+                        <p>Contact us</p>
+                        <p>Our stores</p>
+                        <p>Media press</p>
+                    </div>
 
-                <div class="footer-col">
-                    <h5>Returns</h5>
-                    <p>Returns</p>
-                    <p>Return policy</p>
-                    <p>Refunds</p>
-                    <p>Exchanges</p>
-                    <p>How to return?</p>
-                </div>
+                    <div class="footer-col">
+                        <p class="footer-heading">Returns</p>
+                        <p>Returns</p>
+                        <p>Return policy</p>
+                        <p>Refunds</p>
+                        <p>Exchanges</p>
+                    </div>
 
-                <div class="footer-col">
-                    <h5>Terms & Conditions</h5>
-                    <p>General</p>
-                    <p>Products</p>
-                    <p>Pricing & payment</p>
-                    <p>Exchanges</p>
-                    <p>Shipping & delivery</p>
+                    <div class="footer-col">
+                        <p class="footer-heading">Legal</p>
+                        <p><a href="terms/index.html">Terms &amp; Conditions</a></p>
+                        <p><a href="privacy/index.html">Privacy Policy</a></p>
+                    </div>
                 </div>
-            </div>
+            </nav>
 
             <p class="copyright">Copyright, 2026 Rainy Days.</p>
         </div>
     </footer>
+
+    <script type="module" src="js/nav.js"></script>
+    <script type="module">
+        import { initProductList, initFavoritesCarousel } from './js/product-list.js';
+        
+        initProductList( {
+            gridSelector: '#product-grid',
+            filterFormSelector: '#product-filters',
+            countSelector: '#product-count',
+            loadMoreSelector: '#load-more-btn',
+            basePath: "",
+        });
+
+        initFavoritesCarousel( {
+            carouselSelector: '#favorites-carousel',
+            basePath: "",
+        });
+    </script>
 </body>
 </html>
