@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your Rainy Days order has been placed. View your order number and what happens next.">
+    <title>Rainy Days | Order Confirmation</title>
+    <link href="../../css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer">
+    <link rel="icon" href="../../images/favicon.ico">
+</head>
+<body class="header-line">
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header>
+    <nav class="main-nav" aria-label="Primary">
+        <div class="left-icons">
+            <a href="../../index.html" class="logo">
+                <img src="../../images/RainyDays_Logo-notext.png" alt="Rainy Days logo">
+            </a>
+        </div>
+
+        <ul id="primary-navigation" class="primary-navigation">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../category/mens-clothing.html">Men's</a></li>
+            <li><a href="../../category/womens-clothing.html">Women's</a></li>
+            <li>
+                <a href="../index.html" class="cart-icon" aria-current="page">
+                    <i class="fa-solid fa-cart-shopping fa-lg" aria-hidden="true"></i>
+                    Cart
+                    <span class="cart-number is-empty" data-cart-count>0</span>
+                </a>
+            </li>
+        </ul>
+
+        <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="toggle navigation menu">
+                <i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i>
+        </button>
+
+    </nav>
+</header>
+
+    <main id="main" tabindex="-1">
+
+        <section id="no-order-state" class="empty-cart" hidden>
+            <div class="empty-box">
+                <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                <h1>No recent order found</h1>
+                <P>We could not find a recent order for this session. If you just placed one, check your email for a confirmation. Otherwise, head back to the shop.</P>
+                <a href="../../index.html" class="browse-btn">Back to Shop</a>
+            </div>
+        </section>
+
+        <section id="order-details" class="order-confirmation" hidden>
+
+            <div class="confirmation-icon">
+                <i class="fa-regular fa-circle-check" aria-hidden="true"></i>
+            </div>
+
+            <h1>Thank you for shopping with Rainy Days!</h1>
+            <p class="confirmation-text">We have received your order of <span id="order-item-count">0</span>, items(s), totaling <span id="order-total">$0.00</span>, and are getting everything ready for you.</p>
+
+            <div class="order-number-box">
+                <h2>Order Number</h2>
+                <p class="order-number" id="order-number">#000000</p>
+            </div>
+
+            <div class="order-information">
+                <div class="box-icon">
+                    <i class="fa-regular fa-box-open" aria-hidden="true"></i>
+                </div>
+
+                <div>
+                    <h2>Fast Shipping</h2>
+                    <P>Your order will be shipped within 1-2 business days. You will receive a tracking number via email.</P>
+                </div>
+            </div>
+
+            <div class="order-information">
+                <div class="mail-icon">
+                    <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                </div>
+
+                <div>
+                    <h2>Order Confirmation</h2>
+                    <p>A confirmation email has been sent to your email address with other details about your order.</p>
+                </div>
+            </div>
+
+            <div class="button-row">
+                <a href="../../index.html" class="first-button">Continue Shopping</a>
+                <a href="../../index.html" class="second-button">Back to Home</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-section">
+        <div class="footer-content">
+            <nav aria-label="Footer">
+                <div class="footer-column">
+
+                    <div class="footer-col">
+                        <p class="footer-heading">FAQ</p>
+                        <p>About us</p>
+                        <p>Our values</p>
+                        <p>Climate &amp; environment</p>
+                        <p>Careers - Work with us?</p>
+                    </div>
+
+                    <div class="footer-col">
+                        <p class="footer-heading">Contact</p>
+                        <p>Customer service</p>
+                        <p>Contact us</p>
+                        <p>Our stores</p>
+                        <p>Media press</p>
+                    </div>
+
+                    <div class="footer-col">
+                        <p class="footer-heading">Returns</p>
+                        <p>Returns</p>
+                        <p>Return policy</p>
+                        <p>Refunds</p>
+                        <p>Exchanges</p>
+                    </div>
+
+                    <div class="footer-col">
+                        <p class="footer-heading">Legal</p>
+                        <p><a href="../../terms/index.html">Terms &amp; Conditions</a></p>
+                        <p><a href="../../privacy/index.html">Privacy Policy</a></p>
+                    </div>
+                </div>
+            </nav>
+
+            <p class="copyright">Copyright, 2026 Rainy Days.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="../../js/nav.js"></script>
+    <script type="module" src="../../js/confirmation.js"></script>
+</body>
+</html>
+
+        

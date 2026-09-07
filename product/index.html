@@ -12,19 +12,15 @@
     referrerpolicy="no-referrer">
     <link rel="icon" href="../images/favicon.ico">
 </head>
-<body>
+<body class="header-line">
 <a class="skip-link" href="#main">Skip to main content</a>
 
 <header>
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Primary">
         <div class="left-icons">
             <a href="../index.html" class="logo">
                 <img src="../images/RainyDays_Logo-notext.png" alt="Rainy Days logo">
             </a>
-
-            <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation menu">
-                <i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i>
-            </button>
         </div>
 
         <ul id="primary-navigation" class="primary-navigation">
@@ -35,10 +31,15 @@
                 <a href="../checkout/index.html" class="cart-icon">
                     <i class="fa-solid fa-cart-shopping fa-lg" aria-hidden="true"></i>
                     Cart
-                    <span class="cart-number" data-cart-count hidden>0</span>
+                    <span class="cart-number is-empty" data-cart-count>0</span>
                 </a>
             </li>
         </ul>
+
+        <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="toggle navigation menu">
+                <i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i>
+        </button>
+
     </nav>
 </header>
 
