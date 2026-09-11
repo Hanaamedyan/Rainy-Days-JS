@@ -22,7 +22,6 @@ export function showLoading(container, message = "Loading products...") {
 /**
  * Replaces the contents of a container with an error message.
  * "Try again" button. `role="alert" makes screen readers announce the error immediately. 
- * Call sites should wire up the `data-retry` button to a retry function.
  */
 export function showError(container, message = "An error occurred. Please try again.") {
     container.innerHTML = `
